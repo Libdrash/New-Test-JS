@@ -1,0 +1,106 @@
+body {
+  background-color: #151515;
+  margin: 0;
+}
+.productContainer {
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  background-size: 100%;
+  background-position-x: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.like {
+  background-color: #252525;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 0;
+  background-image: url("../images/general/heartBlack.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 50px;
+  right: 25px;
+}
+.return {
+  background-color: #252525;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 0;
+  background-image: url("../images/general/returnButton.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 50px;
+}
+header {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+footer {
+  background-color: #151515;
+  color: #fff;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+}
+hr {
+  max-width: 48px;
+  background-color: #252525;
+  border: 0;
+  height: 4px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.number {
+  display: flex;
+  justify-content: space-between;
+}
+.calculate input {
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  max-width: 2rem;
+  border: transparent;
+  font-size: 15px;
+}
+.calculate button {
+  color: #7e7e7e;
+  background: #252525;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: 0;
+  font-size: 20px;
+  font-weight: 100;
+}
+.number p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+  max-width: 200px;
+}
+header {
+  min-height: 500px;
+}
+.addSum {
+  background-color: #4c5ff7;
+  color: #fff;
+  border: 0;
+  border-radius: 25px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.calculate {
+  margin-bottom: 60px;
+}

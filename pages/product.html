@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopProduct</title>
+    <link rel="stylesheet" href="../css/product.css" />
+  </head>
+  <body>
+    <div class="productContainer">
+      <header>
+        <button class="return" type="button" onclick="history.back()"></button>
+        <button class="like"></button>
+      </header>
+      <footer>
+        <hr />
+        <div class="number">
+          <p>Clean Climb Sweatshirt</p>
+          <div class="calculate">
+            <button class="minus" type="button" onclick="this.nextElementSibling.stepDown()">&ndash;</button>
+            <input type="number" readonly min="1" value="1" />
+            <button class="plus" type="button" onclick="this.previousElementSibling.stepUp()">&#43;</button>
+          </div>
+        </div>
+        <button class="addSum"><b>Add |</b> <b>&#8364; 75</b></button>
+      </footer>
+      <script src="../js/product.js"></script>
+    </div>
+  </body>
+</html>
