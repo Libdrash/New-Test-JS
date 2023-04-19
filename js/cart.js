@@ -13,9 +13,7 @@ const showCart = (container) => {
   cart.forEach((elem) => {
     const { img, name, material, price, quantity } = elem
     container.innerHTML += `<div class="productInCart">
-        <a>
-            <img alt="productPicture" src="../${img}" />
-        </a>
+        <img alt="productPicture" src="../${img}" />
         <div>
             <p class="productName">${name}</p>
             <p class="material">${material}</p>

@@ -77,9 +77,9 @@ main {
 }
 .productInCart img {
   border-radius: 15px;
-  width: 82px;
+  min-width: 80px;
   object-fit: cover;
-  height: 82px;
+  height: 80px;
 }
 .cartCalculate {
   background-color: #4c5ff7;
@@ -101,6 +101,7 @@ main {
 .productInCart {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 .cartCalculate input {
   background-color: transparent;
@@ -117,6 +118,9 @@ main {
 .cartContainer {
   max-height: 400px;
   overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 @media (min-width: 376px) {
   .productName {
