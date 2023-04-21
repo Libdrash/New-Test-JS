@@ -92,24 +92,45 @@ const productTitleImg = document.querySelectorAll(".productImg")
 
 //инпут
 const getValue = (event) => {
-  let target = event.target
-  filter(target.value)
+  filter(event.target.value)
 }
 
+// const filter = (value) => {
+//   let regex = new RegExp(value, "i")
+//   products.filter((item, index) =>
+//     item.name.match(regex)
+//       ? changeDisplayBlock(Array.from(productList)[index])
+//       : changeDisplayNone(Array.from(productList)[index])
+//   )
+// }
+
+// const changeDisplayNone = (el) => {
+//   el.style.display = "none"
+// }
+// const changeDisplayBlock = (el) => {
+//   el.style.display = "flex"
+// }
 const filter = (value) => {
-  let regex = new RegExp(value, "i")
-  products.filter((item, index) =>
-    item.name.match(regex)
-      ? changeDisplayBlock(Array.from(productList)[index])
-      : changeDisplayNone(Array.from(productList)[index])
-  )
-}
-
-const changeDisplayNone = (el) => {
-  el.style.display = "none"
-}
-const changeDisplayBlock = (el) => {
-  el.style.display = "flex"
+  const filteredProducts = products.filter((item) => item.name.toLowerCase().includes(value.toLowerCase()))
+  catalogueContainer.innerHTML = ""
+  filteredProducts.forEach((el) => {
+    const { name, material, price, rating, img } = el
+    catalogueContainer.innerHTML += `
+  <div class="product">
+    <a>
+      <img alt="productPicture" class="productImg" src="${img}" />
+    </a>
+    <button class="heart"></button>
+    <p class="productsDescription">${name}</p>
+    <p>${material}</p>
+    <div class="numericalData">
+      <span class="price">&#8364; ${price}</span>
+      <div class="rating">
+      <img alt="iconStar" src="images/catalog/star.svg"/> ${rating}
+      </div>
+    </div>
+  </div>`
+  })
 }
 
 const handleClickButtonLike = (event) => {
